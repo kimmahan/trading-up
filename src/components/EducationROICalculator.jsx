@@ -10,7 +10,7 @@ const EducationROICalculator = () => {
   const [inputs, setInputs] = useState({
     universityTuition: 40000,
     communityTuition: 5000,
-    universitySalary: 55000,
+    universitySalary: 65000,
     communitySalary: 45000
   });
 
@@ -102,7 +102,7 @@ const EducationROICalculator = () => {
 
         <div>
           <label className="block text-sm font-medium mb-1">
-            Starting Salary (Community)
+            Post Degree Starting Salary (Community)
           </label>
           <input
             type="number"
