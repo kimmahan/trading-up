@@ -89,7 +89,7 @@ const EducationROICalculator = () => {
 
         <div>
           <label className="block text-sm font-medium mb-1">
-            Starting Salary (University)
+            Post Bachelor's Degree Starting Salary
           </label>
           <input
             type="number"
@@ -102,7 +102,7 @@ const EducationROICalculator = () => {
 
         <div>
           <label className="block text-sm font-medium mb-1">
-            Post Degree Starting Salary (Community)
+            Post Associates Degree Starting Salary
           </label>
           <input
             type="number"
