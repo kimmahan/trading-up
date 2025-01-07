@@ -58,7 +58,14 @@ const EducationROICalculator = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Career Pathways ROI Calculator</h1>
+      <div className="mb-8">
+        <img 
+          src="/maxx-logo.png" 
+          alt="MAXX Potential" 
+          className="h-12 w-auto mb-10" 
+        />
+        <h1 className="text-2xl font-bold">Career Pathways ROI Calculator</h1>
+      </div>
       
       <div className="space-y-4 mb-6">
         <div>
