@@ -8,7 +8,7 @@ const EducationROICalculator = () => {
   const maxxFullSalary = 60000;    // $60,000/year after apprenticeship
 
   const [inputs, setInputs] = useState({
-    universityTuition: 40000,
+    universityTuition: 18000,
     communityTuition: 5000,
     universitySalary: 65000,
     communitySalary: 45000
@@ -121,7 +121,7 @@ const EducationROICalculator = () => {
         </div>
 
         <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-          <h3 className="font-medium mb-2">MAXX Potential Apprenticeship Path:</h3>
+          <h3 className="font-medium mb-2">MAXX Potential Apprenticeship:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600">
             <li>$15/hr ($31,200/year) during 15-month apprenticeship</li>
             <li>$60,000/year after completing apprenticeship</li>
@@ -131,20 +131,23 @@ const EducationROICalculator = () => {
         </div>
       </div>
 
-      <div className="w-full h-[400px]">
+      <div className="w-full h-96">
+        <h3 className="text-lg font-medium mb-4">10-Year ROI Comparison of Career Pathways</h3>
         <LineChart
           width={600}
           height={400}
           data={calculateROI()}
-          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+          margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis 
             dataKey="year"
-            label={{ value: 'Years', position: 'bottom' }}
+            label={{ value: 'Years', position: 'bottom', offset: 15 }}
           />
           <YAxis
             label={{ value: 'Return ($)', angle: -90, position: 'left' }}
+            tickFormatter={(value) => `$${value.toLocaleString()}`}
+            width={100}
           />
           <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
           <Legend />
@@ -157,7 +160,8 @@ const EducationROICalculator = () => {
           <Line 
             type="monotone" 
             dataKey="MAXX Apprenticeship" 
-            stroke="#82ca9d" 
+            stroke="#C41E3A" 
+            strokeWidth={3}
             dot={false}
           />
           <Line 
