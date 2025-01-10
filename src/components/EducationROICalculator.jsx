@@ -40,9 +40,9 @@ const EducationROICalculator = () => {
 
       data.push({
         year,
-        'University Path': universityTotal,
+        'University': universityTotal,
         'MAXX Apprenticeship': maxxTotal,
-        'Community College Path': communityTotal
+        'Community College': communityTotal
       });
     }
     return data;
@@ -153,7 +153,7 @@ const EducationROICalculator = () => {
           <Legend />
           <Line 
             type="monotone" 
-            dataKey="University Path" 
+            dataKey="University" 
             stroke="#8884d8" 
             dot={false}
           />
@@ -166,7 +166,7 @@ const EducationROICalculator = () => {
           />
           <Line 
             type="monotone" 
-            dataKey="Community College Path" 
+            dataKey="Community College" 
             stroke="#ffc658" 
             dot={false}
           />
