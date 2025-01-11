@@ -135,9 +135,9 @@ const EducationROICalculator = () => {
         <h3 className="text-lg font-medium mb-4">10-Year ROI Comparison of Career Pathways</h3>
         <LineChart
           width={600}
-          height={400}
+          height={500}
           data={calculateROI()}
-          margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
+          margin={{ top: 15, right: 30, left: 20, bottom: 25 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis 
@@ -150,7 +150,11 @@ const EducationROICalculator = () => {
             width={100}
           />
           <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
-          <Legend />
+          <Legend 
+            layout="horizontal"
+  verticalAlign="top"
+  align="center"
+  />
           <Line 
             type="monotone" 
             dataKey="University" 
