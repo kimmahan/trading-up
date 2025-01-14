@@ -131,13 +131,13 @@ const EducationROICalculator = () => {
         </div>
       </div>
 
-      <div className="w-full h-96">
+      <div className="w-full" style={{ height: '600px' }}>
         <h3 className="text-lg font-medium mb-4">10-Year ROI Comparison of Career Pathways</h3>
         <LineChart
           width={600}
           height={500}
           data={calculateROI()}
-          margin={{ top: 15, right: 30, left: 20, bottom: 25 }}
+          margin={{ top: 5, right: 30, left: 20, bottom: 25 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis 
@@ -152,9 +152,10 @@ const EducationROICalculator = () => {
           <Tooltip formatter={(value) => `$${value.toLocaleString()}`} />
           <Legend 
             layout="horizontal"
-  verticalAlign="top"
-  align="center"
-  />
+            verticalAlign="top"
+            align="center"
+            wrapperStyle={{ position: 'relative', top: '10px', marginBottom: '100px' }}
+          />
           <Line 
             type="monotone" 
             dataKey="University" 
