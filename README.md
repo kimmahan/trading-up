@@ -19,6 +19,7 @@ The calculator factors in:
 ## Features
 
 - Interactive input fields for customizing calculations
+- Defaults based on national averages
 - Real-time ROI visualization graph
 - 10-year earnings projection
 - Comparison of total costs and returns
